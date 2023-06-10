@@ -1,34 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 
-void reverseString(char* str) {
+void ReverseText(char* text) {
+    int length = strlen(text);
     int i, j;
     char temp;
 
-    // Kelimenin başını ve sonunu takas etmek için iki indeks kullanılır
-    i = 0;
-    j = strlen(str) - 1;
-
-    // İki indeks birbirine yaklaşana kadar takas işlemi yapılır
-    while (i < j) {
-        temp = str[i];
-        str[i] = str[j];
-        str[j] = temp;
-        i++;
-        j--;
+    for (i = 0, j = length - 1; i < j; i++, j--) {
+        temp = text[i];
+        text[i] = text[j];
+        text[j] = temp;
     }
 }
 
 int main() {
-    char str[100];
+    char text[100];
 
-    printf("Please enter a text: ");
-    fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0'; 
+    printf("Enter Text: ");
+    fgets(text, sizeof(text), stdin);
 
-    reverseString(str);
+    text[strcspn(text, "\n")] = '\0';
 
-    printf("Reversed Text: %s\n", str);
+    ReverseText(text);
+
+    printf("Reversed Text: %s\n", text);
 
     return 0;
 }
