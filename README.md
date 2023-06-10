@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
   <style>
     @property --rotate {
+      syntax: "<angle>";
+      initial-value: 132deg;
+      inherits: false;
+    }
+
+    :root {
+      --card-height: 65vh;
+      --card-width: calc(var(--card-height) / 1.5);
+    }
+
+     @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
   inherits: false;
@@ -105,11 +115,12 @@ a {
   font-weight: bold;
   margin-top: 2rem;
 }
+
   </style>
 </head>
 <body>
   <div class="card">
-    Selam, bu ödev Kodluyoruz ve Patika.Dev gerçekleştirmiş olduğu 6 Aylik Yazilim Eğitim Desteği İçin Yapildi
+    Selam, bu ödev Kodluyoruz ve Patika.Dev gerçekleştirmiş olduğu 6 Aylık Yazılım Eğitim Desteği İçin Yapıldı
   </div>
   <a href="https://www.linkedin.com/in/beraatoztorun/" target="_blank">Beraat Öztorun</a>
 </body>
